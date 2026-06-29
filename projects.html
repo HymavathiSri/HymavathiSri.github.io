@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Hymavathi Gampasani</title>
+  <meta name="description" content="Projects by Hymavathi Gampasani — Deep Learning, Computer Vision, Full-Stack Web Development, and Cloud Computing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">HG.</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="assets/Hymavathi_Resume.pdf" class="btn-nav" download>Resume ↓</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#skills" class="mobile-link">Skills</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="index.html#experience" class="mobile-link">Experience</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+    <a href="assets/Hymavathi_Resume.pdf" class="mobile-link" download>Download Resume</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="section-eyebrow">Portfolio</div>
+    <h1 class="section-title">All Projects</h1>
+    <p class="section-sub">From deep learning research to production web apps — here's what I've built</p>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai">AI / Deep Learning</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="cloud">Cloud</button>
+    </div>
+  </div>
+
+  <section class="projects-page">
+    <!-- Road Damage -->
+    <div class="project-detail" id="road-damage" data-category="ai">
+      <div class="project-detail-header">
+        <div>
+          <div class="project-tag">Computer Vision · Deep Learning</div>
+          <h2>Automated Road Damage Detection Using UAV Images</h2>
+        </div>
+        <div class="project-detail-badges">
+          <span class="badge badge-green">Final Year Project</span>
+        </div>
+      </div>
+      <div class="project-detail-body">
+        <div class="project-detail-text">
+          <p>Developed a deep learning-based system that automatically detects and classifies road damage from Unmanned Aerial Vehicle (UAV) images. Infrastructure maintenance is expensive and manual inspection is slow — this system brings AI-powered automation to road monitoring at scale.</p>
+          <h4>What it does</h4>
+          <ul>
+            <li>Detects road damage (cracks, potholes, surface defects) from aerial drone imagery with high precision.</li>
+            <li>Implements and compares three state-of-the-art YOLO architectures: YOLOv4, YOLOv5, and YOLOv7 on deep CNN backbones.</li>
+            <li>Trained and evaluated on the RDD2022 dataset (China road data) combined with a Spanish road dataset for cross-domain generalization.</li>
+            <li>Provides real-time object detection and localization in UAV images, suitable for deployment on edge devices or cloud inference.</li>
+          </ul>
+          <h4>Technical Approach</h4>
+          <ul>
+            <li>Used transfer learning on pre-trained YOLOv4/v5/v7 backbones fine-tuned on road damage imagery.</li>
+            <li>Applied data augmentation (flipping, rotation, brightness variation) to improve model robustness.</li>
+            <li>Benchmarked models using mAP, Precision, Recall, and F1 score metrics.</li>
+            <li>OpenCV used for image preprocessing and post-processing bounding box visualization.</li>
+          </ul>
+          <div class="project-pills">
+            <span>Python</span><span>YOLOv4</span><span>YOLOv5</span><span>YOLOv7</span>
+            <span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>UAV</span><span>CNN</span><span>RDD2022</span>
+          </div>
+        </div>
+        <div class="project-detail-sidebar">
+          <div class="sidebar-card">
+            <h4>Key Highlights</h4>
+            <div class="sidebar-stat"><span>🛩️</span><span>UAV aerial imagery</span></div>
+            <div class="sidebar-stat"><span>📊</span><span>3 algorithm comparison</span></div>
+            <div class="sidebar-stat"><span>🗂️</span><span>Multi-dataset training</span></div>
+            <div class="sidebar-stat"><span>🔍</span><span>Real-time detection</span></div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Domain</h4>
+            <p>Infrastructure Monitoring · Smart Cities · Computer Vision</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loan Insurance -->
+    <div class="project-detail" id="loan" data-category="web">
+      <div class="project-detail-header">
+        <div>
+          <div class="project-tag">Full Stack · Django · Python</div>
+          <h2>Loan Insurance System Web Application</h2>
+        </div>
+        <div class="project-detail-badges">
+          <span class="badge badge-blue">Full Stack</span>
+        </div>
+      </div>
+      <div class="project-detail-body">
+        <div class="project-detail-text">
+          <p>A complete loan management and insurance tracking web application built using the Django framework in Python. The system allows users to apply for loans, track repayment schedules, and manage insurance coverage in one unified platform.</p>
+          <h4>What it does</h4>
+          <ul>
+            <li>User authentication and role-based access control for applicants, agents, and administrators.</li>
+            <li>Loan application workflow with status tracking — from submission to approval or rejection.</li>
+            <li>Insurance policy management linked to active loans with premium calculation logic.</li>
+            <li>Admin dashboard with overview of all loans, users, and payment records.</li>
+            <li>Responsive UI built with Bootstrap for accessibility on all devices.</li>
+          </ul>
+          <h4>Technical Details</h4>
+          <ul>
+            <li>Built on Django's MVT architecture, with clean separation of models, views, and templates.</li>
+            <li>SQLite3 as the primary relational database with Django ORM for all data operations.</li>
+            <li>Form validation and CSRF protection implemented using Django's built-in security features.</li>
+            <li>JavaScript used for dynamic form interactions and real-time field validation.</li>
+          </ul>
+          <div class="project-pills">
+            <span>Django</span><span>Python</span><span>SQLite3</span><span>JavaScript</span><span>HTML/CSS</span><span>Bootstrap</span>
+          </div>
+        </div>
+        <div class="project-detail-sidebar">
+          <div class="sidebar-card">
+            <h4>Key Highlights</h4>
+            <div class="sidebar-stat"><span>🔐</span><span>Auth & role management</span></div>
+            <div class="sidebar-stat"><span>📋</span><span>Full loan lifecycle</span></div>
+            <div class="sidebar-stat"><span>📱</span><span>Responsive design</span></div>
+            <div class="sidebar-stat"><span>🗄️</span><span>SQLite3 backend</span></div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Domain</h4>
+            <p>FinTech · Web Applications · Backend Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Library Management -->
+    <div class="project-detail" id="library" data-category="web">
+      <div class="project-detail-header">
+        <div>
+          <div class="project-tag">Web Application · PHP · MySQL</div>
+          <h2>Library Management System</h2>
+        </div>
+        <div class="project-detail-badges">
+          <span class="badge badge-purple">Web App</span>
+        </div>
+      </div>
+      <div class="project-detail-body">
+        <div class="project-detail-text">
+          <p>A full-stack library management system enabling librarians and students to manage book inventory, member registrations, and the complete issue/return cycle through a clean, intuitive web interface.</p>
+          <h4>What it does</h4>
+          <ul>
+            <li>Book inventory management — add, update, delete, and search the catalog with category filtering.</li>
+            <li>Member registration and profile management for library users.</li>
+            <li>Issue and return workflow with date tracking and fine calculation for overdue books.</li>
+            <li>Admin panel with reports on book availability, active issues, and member activity.</li>
+            <li>Search functionality to quickly locate books by title, author, or ISBN.</li>
+          </ul>
+          <h4>Technical Details</h4>
+          <ul>
+            <li>Frontend built with HTML, CSS, and Bootstrap for a clean responsive layout.</li>
+            <li>PHP on the backend for server-side logic and form handling.</li>
+            <li>MySQL as the relational database, managed via XAMPP local server environment.</li>
+            <li>JavaScript for client-side interactions, search filtering, and dynamic UI updates.</li>
+          </ul>
+          <div class="project-pills">
+            <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JavaScript</span><span>XAMPP</span>
+          </div>
+        </div>
+        <div class="project-detail-sidebar">
+          <div class="sidebar-card">
+            <h4>Key Highlights</h4>
+            <div class="sidebar-stat"><span>📚</span><span>Full catalog management</span></div>
+            <div class="sidebar-stat"><span>🔄</span><span>Issue/return workflow</span></div>
+            <div class="sidebar-stat"><span>💰</span><span>Fine calculation</span></div>
+            <div class="sidebar-stat"><span>🔎</span><span>Smart search</span></div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Domain</h4>
+            <p>Education · Database Management · Web Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AWS Cloud Project -->
+    <div class="project-detail" id="aws" data-category="cloud">
+      <div class="project-detail-header">
+        <div>
+          <div class="project-tag">Cloud Computing · AWS</div>
+          <h2>Scalable Application Deployment on AWS</h2>
+        </div>
+        <div class="project-detail-badges">
+          <span class="badge badge-orange">Cloud</span>
+        </div>
+      </div>
+      <div class="project-detail-body">
+        <div class="project-detail-text">
+          <p>During the AWS Cloud Computing internship, developed and deployed scalable cloud applications on the AWS platform, applying core cloud principles to address real-world infrastructure and deployment challenges.</p>
+          <h4>What was built</h4>
+          <ul>
+            <li>Deployed scalable web applications on AWS EC2 instances with proper security group configuration and auto-scaling concepts.</li>
+            <li>Leveraged AWS S3 for static asset storage, object management, and integration with deployed applications.</li>
+            <li>Set up and configured AWS RDS for managed relational database hosting with backup and availability settings.</li>
+            <li>Applied cloud architecture principles — scalability, fault tolerance, and cost optimization — on real-time projects.</li>
+            <li>Collaborated in a team environment to design and review cloud solutions for practical business use cases.</li>
+          </ul>
+          <div class="project-pills">
+            <span>AWS EC2</span><span>AWS S3</span><span>AWS RDS</span><span>Cloud Architecture</span><span>Scalability</span>
+          </div>
+        </div>
+        <div class="project-detail-sidebar">
+          <div class="sidebar-card">
+            <h4>Services Used</h4>
+            <div class="sidebar-stat"><span>⚙️</span><span>EC2 — Compute</span></div>
+            <div class="sidebar-stat"><span>🪣</span><span>S3 — Storage</span></div>
+            <div class="sidebar-stat"><span>🗄️</span><span>RDS — Database</span></div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Domain</h4>
+            <p>Cloud Computing · DevOps · Infrastructure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="center-cta" style="padding: 3rem 2rem 6rem;">
+    <a href="index.html#contact" class="btn-primary">Let's Work Together →</a>
+  </div>
+
+  <footer class="footer">
+    <p>HG.</p>
+    <p class="footer-copy">© 2026 Hymavathi Gampasani · AI & Data Science Engineer · Hyderabad, India</p>
+    <div class="footer-links">
+      <a href="mailto:gampasanihymavathi@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/HymavathiSri" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
