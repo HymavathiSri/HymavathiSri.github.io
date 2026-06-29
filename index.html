@@ -1,342 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hymavathi Gampasani — AI & Data Science Engineer</title>
-  <meta name="description" content="Hymavathi Gampasani is an AI & Data Science graduate with expertise in Deep Learning, Computer Vision, Full-Stack Development, and Cloud Computing. Open to AI, ML, Data, and Software roles." />
-  <meta name="keywords" content="AI Engineer, Data Science, Machine Learning, Deep Learning, Python, Computer Vision, Full Stack Developer, Fresher, Hyderabad" />
-  <meta property="og:title" content="Hymavathi Gampasani — AI & Data Science Engineer" />
-  <meta property="og:description" content="B.Tech AI&DS graduate passionate about building intelligent systems and scalable applications." />
-  <meta property="og:image" content="assets/profile.png" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hymavathi Gampasani — AI & Data Science Engineer</title>
+<meta name="description" content="AI & Data Science Engineer — Deep Learning, Python, Cloud, Full Stack. Open to AI, ML, Data, Software roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#070711;color:#e2e0f5;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── VARIABLES ── */
+:root{
+  --bg:#070711;
+  --bg2:#0d0d1a;
+  --card:#111125;
+  --border:#1e1e38;
+  --violet:#8b5cf6;
+  --violet2:#a78bfa;
+  --teal:#2dd4bf;
+  --pink:#f472b6;
+  --text:#e2e0f5;
+  --muted:#8b87b0;
+  --dim:#4a4669;
+  --r:12px;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:68px;
+  background:rgba(7,7,17,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;color:var(--violet2);letter-spacing:-0.02em}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-btn{
+  font-size:.8rem;font-weight:600;padding:.45rem 1.2rem;
+  border:1px solid var(--violet);border-radius:50px;color:var(--violet2);
+  transition:all .2s;
+}
+.nav-btn:hover{background:var(--violet);color:#fff}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+.mob{display:none;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--border);z-index:998}
+.mob.on{display:flex}
+.mob a{padding:.9rem 5%;font-size:.95rem;color:var(--muted);border-bottom:1px solid var(--border);transition:color .2s}
+.mob a:hover{color:var(--text)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:100px 5% 60px;gap:60px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-100px;right:-100px;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(139,92,246,.12) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-left{flex:1;min-width:0;max-width:580px}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal);background:rgba(45,212,191,.08);
+  border:1px solid rgba(45,212,191,.25);padding:.38rem 1rem;border-radius:50px;
+  margin-bottom:1.8rem;
+}
+.dot{width:7px;height:7px;background:var(--teal);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1.name{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(2.6rem,5.5vw,4.2rem);
+  font-weight:700;line-height:1.08;letter-spacing:-.025em;
+  color:#fff;margin-bottom:.4rem;
+}
+h1.name span{color:var(--violet2)}
+.subtitle{font-size:.92rem;color:var(--muted);letter-spacing:.05em;margin-bottom:1.6rem;font-family:'Space Grotesk',sans-serif}
+.bio{font-size:.97rem;color:var(--muted);line-height:1.8;margin-bottom:2.2rem}
+.bio strong{color:var(--text);font-weight:600}
+.stats{display:flex;gap:2.5rem;margin-bottom:2.2rem}
+.stat-n{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;color:var(--violet2);display:block;line-height:1}
+.stat-l{font-size:.72rem;color:var(--dim);display:block;margin-top:3px;letter-spacing:.04em}
+.btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn-p{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--violet),var(--violet2));
+  color:#fff;font-weight:600;font-size:.88rem;
+  padding:.72rem 1.7rem;border-radius:50px;
+  transition:all .25s;box-shadow:0 4px 20px rgba(139,92,246,.3);
+  border:none;cursor:pointer;
+}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(139,92,246,.45)}
+.btn-s{
+  display:inline-block;color:var(--text);font-weight:600;font-size:.88rem;
+  padding:.72rem 1.7rem;border-radius:50px;border:1px solid var(--border);
+  transition:all .25s;
+}
+.btn-s:hover{border-color:var(--violet);color:var(--violet2)}
+.socials{display:flex;gap:.75rem}
+.soc{
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--border);border-radius:9px;color:var(--muted);
+  transition:all .2s;
+}
+.soc svg{width:17px;height:17px}
+.soc:hover{border-color:var(--violet);color:var(--violet2);background:rgba(139,92,246,.1)}
+
+/* hero image */
+.hero-right{flex-shrink:0;position:relative;width:320px}
+.img-wrap{
+  width:280px;height:340px;margin:0 auto;position:relative;
+}
+.img-wrap img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  border-radius:140px 140px 100px 100px;
+  border:2px solid rgba(139,92,246,.35);
+  box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(139,92,246,.1);
+  display:block;
+}
+.img-glow{
+  position:absolute;inset:-20px;border-radius:50%;
+  background:radial-gradient(circle,rgba(139,92,246,.15) 0%,transparent 70%);
+  z-index:-1;
+}
+.float-chip{
+  position:absolute;
+  font-size:.68rem;font-weight:600;padding:.28rem .75rem;
+  border-radius:50px;white-space:nowrap;
+  backdrop-filter:blur(8px);
+}
+.fc1{top:20px;left:-75px;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);color:var(--violet2)}
+.fc2{top:100px;right:-70px;background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.25);color:var(--teal)}
+.fc3{bottom:110px;left:-65px;background:rgba(244,114,182,.1);border:1px solid rgba(244,114,182,.25);color:var(--pink)}
+.fc4{bottom:30px;right:-60px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.25);color:var(--violet2)}
+
+/* ── SECTION BASE ── */
+section{padding:80px 5%}
+.s2{background:var(--bg2)}
+.eyebrow{font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem}
+h2.stitle{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(1.7rem,3.5vw,2.5rem);
+  font-weight:700;letter-spacing:-.02em;color:#fff;margin-bottom:.75rem;
+}
+.ssub{font-size:.95rem;color:var(--muted);max-width:520px;margin-bottom:3rem}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.sk-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.6rem;
+  transition:all .3s;
+}
+.sk-card:hover{border-color:rgba(139,92,246,.3);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.sk-icon{font-size:1.6rem;margin-bottom:.9rem}
+.sk-card h3{font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:600;color:#fff;margin-bottom:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:.38rem}
+.tag{
+  font-size:.67rem;padding:.22rem .65rem;
+  background:rgba(255,255,255,.04);border:1px solid var(--border);
+  border-radius:50px;color:var(--muted);
+}
+
+/* ── PROJECTS ── */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem}
+.proj-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.6rem;
+  display:flex;flex-direction:column;gap:.8rem;
+  transition:all .3s;
+}
+.proj-card:hover{border-color:rgba(139,92,246,.3);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.proj-card.big{grid-column:span 2;border-color:rgba(139,92,246,.18);background:linear-gradient(135deg,rgba(139,92,246,.05),rgba(45,212,191,.03))}
+.ptag{font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--teal)}
+.proj-card h3{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;color:#fff;line-height:1.3}
+.proj-card p{font-size:.86rem;color:var(--muted);line-height:1.7;flex:1}
+.proj-pills{display:flex;flex-wrap:wrap;gap:.35rem}
+.pill{font-size:.64rem;padding:.2rem .6rem;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);border-radius:50px;color:var(--violet2)}
+.proj-meta{display:flex;gap:1rem;font-size:.75rem;color:var(--dim)}
+.plink{font-size:.82rem;font-weight:600;color:var(--violet2);transition:color .2s;align-self:flex-start}
+.plink:hover{color:var(--teal)}
+.center{text-align:center}
+
+/* ── EXPERIENCE ── */
+.tl{position:relative;padding-left:1.5rem;margin-bottom:3rem}
+.tl::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:var(--border)}
+.tli{position:relative;padding-left:2rem;margin-bottom:2.2rem}
+.tld{
+  position:absolute;left:-1.65rem;top:6px;
+  width:11px;height:11px;border-radius:50%;background:var(--violet);
+  border:2px solid var(--bg);box-shadow:0 0 0 3px rgba(139,92,246,.2);
+}
+.tli.edu .tld{background:var(--teal);box-shadow:0 0 0 3px rgba(45,212,191,.2)}
+.tlc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:all .3s}
+.tlc:hover{border-color:rgba(139,92,246,.2)}
+.tl-date{font-size:.68rem;color:var(--teal);font-weight:600;letter-spacing:.05em;margin-bottom:.4rem;font-family:'Space Grotesk',sans-serif}
+.tlc h3{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;color:#fff;margin-bottom:.2rem}
+.tlc .org{font-size:.82rem;color:var(--violet2);font-weight:500;margin-bottom:.8rem}
+.tlc li{font-size:.84rem;color:var(--muted);padding:.22rem 0 .22rem 1.1rem;position:relative;line-height:1.6}
+.tlc li::before{content:'→';position:absolute;left:0;color:var(--violet);font-size:.75rem}
+.tlc p{font-size:.84rem;color:var(--muted);line-height:1.7}
+.tl-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+.tl-tag{font-size:.65rem;padding:.18rem .6rem;background:rgba(139,92,246,.08);border:1px solid rgba(139,92,246,.18);border-radius:50px;color:var(--violet2)}
+
+/* ── ACHIEVEMENTS ── */
+.ach-title{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:600;color:#fff;margin-bottom:1.2rem}
+.ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+.ach-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.1rem 1.2rem;
+  display:flex;align-items:flex-start;gap:.65rem;
+  transition:all .3s;
+}
+.ach-card:hover{border-color:rgba(139,92,246,.2);background:rgba(139,92,246,.05)}
+.ach-i{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+.ach-card p{font-size:.82rem;color:var(--muted);line-height:1.5}
+
+/* ── CONTACT ── */
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:960px}
+.ct-info h3{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:600;color:#fff;margin-bottom:.8rem}
+.ct-info>p{font-size:.9rem;color:var(--muted);line-height:1.75;margin-bottom:1.8rem}
+.ct-links{display:flex;flex-direction:column;gap:.85rem;margin-bottom:1.8rem}
+.ct-item{display:flex;align-items:center;gap:.7rem;font-size:.88rem;color:var(--muted);transition:color .2s}
+.ct-item:hover{color:var(--text)}
+.ct-icon{font-size:.95rem;width:20px;text-align:center}
+.form{display:flex;flex-direction:column;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.35rem}
+.fg label{font-size:.75rem;font-weight:600;color:var(--muted);letter-spacing:.03em}
+.fg input,.fg textarea{
+  background:var(--card);border:1px solid var(--border);border-radius:8px;
+  padding:.7rem .95rem;font-size:.88rem;color:var(--text);font-family:'Inter',sans-serif;
+  transition:border-color .2s;resize:none;
+}
+.fg input:focus,.fg textarea:focus{outline:none;border-color:var(--violet)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--dim)}
+.fnote{font-size:.78rem;color:var(--teal);text-align:center;min-height:1.2em}
+.btn-full{width:100%;text-align:center}
+
+/* ── FOOTER ── */
+footer{
+  padding:2rem 5%;border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:1rem;
+}
+.fl{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--violet2)}
+.fc{font-size:.78rem;color:var(--dim)}
+.flinks{display:flex;gap:1.5rem}
+.flinks a{font-size:.78rem;color:var(--dim);transition:color .2s}
+.flinks a:hover{color:var(--text)}
+
+/* ── ANIMATE ── */
+.au{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.au.vis{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .proj-grid{grid-template-columns:1fr}
+  .proj-card.big{grid-column:span 1}
+  .ach-grid{grid-template-columns:repeat(2,1fr)}
+  .ct-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero{gap:3rem}
+  .hero-right{width:260px}
+  .img-wrap{width:230px;height:280px}
+  .float-chip{display:none}
+}
+@media(max-width:700px){
+  .nav-links,.nav-btn{display:none}
+  .ham{display:flex}
+  .hero{flex-direction:column;padding:90px 5% 50px;text-align:center}
+  .hero-right{order:-1;width:200px}
+  .img-wrap{width:190px;height:230px}
+  .stats{justify-content:center}
+  .btns{justify-content:center}
+  .socials{justify-content:center}
+  .skills-grid{grid-template-columns:1fr}
+  .ach-grid{grid-template-columns:1fr}
+  section{padding:55px 5%}
+  footer{flex-direction:column;text-align:center}
+}
+</style>
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo">HG.</a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a href="assets/Hymavathi_Resume.pdf" class="btn-nav" download>Resume ↓</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#skills" class="mobile-link">Skills</a>
-    <a href="projects.html" class="mobile-link">Projects</a>
-    <a href="#experience" class="mobile-link">Experience</a>
-    <a href="#contact" class="mobile-link">Contact</a>
-    <a href="assets/Hymavathi_Resume.pdf" class="mobile-link" download>Download Resume</a>
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">HG.</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="assets/Hymavathi_Resume_.pdf" class="nav-btn" download>Resume ↓</a>
+  <button class="ham" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mob" id="mob">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+  <a href="assets/Hymavathi_Resume_.pdf" download>Download Resume</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-left">
+    <div class="badge"><span class="dot"></span> Open to opportunities</div>
+    <h1 class="name">Hymavathi<br><span>Gampasani</span></h1>
+    <p class="subtitle">AI &amp; Data Science Engineer</p>
+    <p class="bio">
+      B.Tech graduate in <strong>Artificial Intelligence &amp; Data Science</strong> with hands-on experience in deep learning, computer vision, cloud computing, and full-stack web development. I build intelligent systems that solve real-world problems. Open to <strong>AI, ML, Data Science</strong> and <strong>Software Engineering</strong> roles.
+    </p>
+    <div class="stats">
+      <div><span class="stat-n">3+</span><span class="stat-l">Projects Built</span></div>
+      <div><span class="stat-n">2</span><span class="stat-l">Internships</span></div>
+      <div><span class="stat-n">74%</span><span class="stat-l">B.Tech CGPA</span></div>
+    </div>
+    <div class="btns">
+      <a href="#projects" class="btn-p">View My Projects</a>
+      <a href="#contact" class="btn-s">Get In Touch</a>
+    </div>
+    <div class="socials">
+      <a href="mailto:gampasanihymavathi@gmail.com" class="soc" title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" class="soc" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/HymavathiSri" target="_blank" class="soc" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      </a>
+    </div>
   </div>
 
-  <!-- HERO -->
-  <section class="hero" id="about">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="dot"></span> Open to opportunities
+  <div class="hero-right">
+    <div class="img-wrap">
+      <div class="img-glow"></div>
+      <img src="assets/Hyma Profile 1.png" alt="Hymavathi Gampasani" onerror="this.style.background='linear-gradient(135deg,#1a1a2e,#8b5cf6)';this.removeAttribute('src')">
+      <div class="float-chip fc1">Deep Learning</div>
+      <div class="float-chip fc2">Python</div>
+      <div class="float-chip fc3">AWS Cloud</div>
+      <div class="float-chip fc4">YOLOv7</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="s2" id="skills">
+  <div class="eyebrow">What I Know</div>
+  <h2 class="stitle">Technical Skills</h2>
+  <p class="ssub">Across AI, development, cloud, and data — built through projects and real internships</p>
+  <div class="skills-grid">
+    <div class="sk-card au">
+      <div class="sk-icon">🤖</div>
+      <h3>AI &amp; Machine Learning</h3>
+      <div class="tags">
+        <span class="tag">Deep Learning</span><span class="tag">Computer Vision</span>
+        <span class="tag">YOLOv4/v5/v7</span><span class="tag">TensorFlow</span>
+        <span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">CNN</span><span class="tag">NLP</span>
       </div>
-      <h1 class="hero-name">Hymavathi<br /><span class="accent">Gampasani</span></h1>
-      <p class="hero-title">AI & Data Science Engineer</p>
-      <p class="hero-bio">
-        B.Tech graduate in Artificial Intelligence & Data Science with hands-on experience in deep learning, computer vision, cloud computing, and full-stack web development. I build intelligent systems that solve real-world problems — from UAV-based road damage detection to loan management platforms. Open to <strong>AI, ML, Data Science,</strong> and <strong>Software Engineering</strong> roles.
-      </p>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Projects Built</span></div>
-        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Internships</span></div>
-        <div class="stat"><span class="stat-num">74%</span><span class="stat-label">B.Tech CGPA</span></div>
+    </div>
+    <div class="sk-card au">
+      <div class="sk-icon">💻</div>
+      <h3>Programming</h3>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span>
+        <span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">Bash</span>
       </div>
-      <div class="hero-cta">
-        <a href="projects.html" class="btn-primary">View My Projects</a>
-        <a href="#contact" class="btn-secondary">Get In Touch</a>
+    </div>
+    <div class="sk-card au">
+      <div class="sk-icon">🌐</div>
+      <h3>Web Development</h3>
+      <div class="tags">
+        <span class="tag">Django</span><span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span>
+        <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">SQLite3</span><span class="tag">REST APIs</span>
       </div>
-      <div class="hero-socials">
-        <a href="mailto:gampasanihymavathi@gmail.com" title="Email" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+    <div class="sk-card au">
+      <div class="sk-icon">☁️</div>
+      <h3>Cloud &amp; DevOps</h3>
+      <div class="tags">
+        <span class="tag">AWS EC2</span><span class="tag">AWS S3</span><span class="tag">AWS RDS</span>
+        <span class="tag">Cloud Deployment</span><span class="tag">Scalable Apps</span>
+      </div>
+    </div>
+    <div class="sk-card au">
+      <div class="sk-icon">🗄️</div>
+      <h3>Data &amp; Databases</h3>
+      <div class="tags">
+        <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">SQLite</span>
+        <span class="tag">Excel</span><span class="tag">Data Analysis</span><span class="tag">MS Office</span>
+      </div>
+    </div>
+    <div class="sk-card au">
+      <div class="sk-icon">🧪</div>
+      <h3>Engineering Practices</h3>
+      <div class="tags">
+        <span class="tag">SDLC</span><span class="tag">Software Testing</span>
+        <span class="tag">Git &amp; GitHub</span><span class="tag">Agile</span><span class="tag">Problem Solving</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="eyebrow">What I've Built</div>
+  <h2 class="stitle">Featured Projects</h2>
+  <p class="ssub">From computer vision research to production web applications</p>
+
+  <div class="proj-grid">
+    <div class="proj-card big au">
+      <div class="ptag">Computer Vision · Deep Learning</div>
+      <h3>Automated Road Damage Detection Using UAV Images</h3>
+      <p>UAV-based road damage detection system using YOLOv4, YOLOv5, and YOLOv7 on deep CNNs. Trained on the RDD2022 dataset (China + Spain roads), achieving accurate real-time detection and localization of road damage from aerial drone imagery — enabling smarter infrastructure monitoring at scale.</p>
+      <div class="proj-pills">
+        <span class="pill">Python</span><span class="pill">YOLOv7</span><span class="pill">TensorFlow</span>
+        <span class="pill">OpenCV</span><span class="pill">UAV</span><span class="pill">CNN</span><span class="pill">RDD2022</span>
+      </div>
+      <div class="proj-meta"><span>🛩️ UAV aerial imagery</span><span>📊 3-algorithm comparison</span></div>
+    </div>
+
+    <div class="proj-card au">
+      <div class="ptag">Full Stack · Python</div>
+      <h3>Loan Insurance System</h3>
+      <p>End-to-end loan management web app with Django, SQLite3, JavaScript, HTML, CSS, and Bootstrap — featuring loan tracking, user authentication, and a data-driven admin dashboard.</p>
+      <div class="proj-pills">
+        <span class="pill">Django</span><span class="pill">SQLite3</span><span class="pill">JavaScript</span><span class="pill">Bootstrap</span>
+      </div>
+    </div>
+
+    <div class="proj-card au">
+      <div class="ptag">Web Application · PHP</div>
+      <h3>Library Management System</h3>
+      <p>Full-featured library portal built with HTML, CSS, JavaScript, PHP, and MySQL on XAMPP — supporting book inventory, member records, issue/return workflows, and fine calculation.</p>
+      <div class="proj-pills">
+        <span class="pill">PHP</span><span class="pill">MySQL</span><span class="pill">Bootstrap</span><span class="pill">XAMPP</span>
+      </div>
+    </div>
+
+    <div class="proj-card au">
+      <div class="ptag">Cloud Computing · AWS</div>
+      <h3>Scalable App Deployment on AWS</h3>
+      <p>Developed and deployed scalable cloud applications using AWS EC2, S3, and RDS during the AWS internship — applying cloud architecture principles for reliability and cost efficiency.</p>
+      <div class="proj-pills">
+        <span class="pill">AWS EC2</span><span class="pill">S3</span><span class="pill">RDS</span><span class="pill">Cloud Architecture</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="center">
+    <a href="https://github.com/HymavathiSri" target="_blank" class="btn-p">View All on GitHub →</a>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="s2" id="experience">
+  <div class="eyebrow">My Journey</div>
+  <h2 class="stitle">Experience &amp; Education</h2>
+
+  <div class="tl">
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tlc au">
+        <div class="tl-date">Nov 2025 – Apr 2026</div>
+        <h3>Software Development Intern</h3>
+        <p class="org">Cognifyz Technologies</p>
+        <ul>
+          <li>Worked on real-time software development projects applying Python programming in production environments.</li>
+          <li>Built and tested features across multiple modules, gaining hands-on experience with debugging and agile workflows.</li>
+          <li>Collaborated with cross-functional teams to deliver software solutions meeting business requirements.</li>
+          <li>Enhanced proficiency in writing clean, maintainable Python code following engineering best practices.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">Python</span><span class="tl-tag">Software Development</span><span class="tl-tag">Agile</span></div>
+      </div>
+    </div>
+
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tlc au">
+        <div class="tl-date">May 2025 – Oct 2025</div>
+        <h3>AWS Cloud Computing Intern</h3>
+        <p class="org">Amazon Web Services (AWS)</p>
+        <ul>
+          <li>Gained hands-on experience with AWS EC2, S3, and RDS for real-world application deployment.</li>
+          <li>Developed and deployed scalable applications, applying cloud principles to solve infrastructure challenges.</li>
+          <li>Worked on real-time cloud projects, optimizing resource usage and leveraging managed services for efficiency.</li>
+          <li>Collaborated to design cloud architectures, improving both technical and communication skills.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">AWS EC2</span><span class="tl-tag">S3</span><span class="tl-tag">RDS</span><span class="tl-tag">Cloud Architecture</span></div>
+      </div>
+    </div>
+
+    <div class="tli edu">
+      <div class="tld"></div>
+      <div class="tlc au">
+        <div class="tl-date">2021 – 2025</div>
+        <h3>B.Tech — Artificial Intelligence &amp; Data Science</h3>
+        <p class="org">St. Mary's Women's Engineering College, Guntur</p>
+        <p>CGPA: <strong style="color:#fff">74%</strong> · Focused on machine learning, deep learning, data structures, web development, and cloud computing. Final-year project on UAV-based road damage detection using deep CNN architectures (YOLOv4/v5/v7).</p>
+        <div class="tl-tags"><span class="tl-tag">AI/ML</span><span class="tl-tag">Data Science</span><span class="tl-tag">Deep Learning</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="ach-title">Achievements &amp; Certifications</p>
+  <div class="ach-grid">
+    <div class="ach-card au"><div class="ach-i">🥈</div><p>Silver Medal — Java Internship project completion</p></div>
+    <div class="ach-card au"><div class="ach-i">🏆</div><p>Elite+ Badge — Java Certification (78% score)</p></div>
+    <div class="ach-card au"><div class="ach-i">🔬</div><p>District-level 2nd place — Science Exhibition</p></div>
+    <div class="ach-card au"><div class="ach-i">📜</div><p>Certified: Java, Data Science, C &amp; Data Structures, Hackathon</p></div>
+    <div class="ach-card au"><div class="ach-i">☁️</div><p>AWS Cloud Computing Internship Certificate</p></div>
+    <div class="ach-card au"><div class="ach-i">💡</div><p>Hackathon Participant — problem solving under real constraints</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="eyebrow">Let's Connect</div>
+  <h2 class="stitle">Get In Touch</h2>
+  <p class="ssub">Open to AI, ML, Data Science, and Software Engineering roles — full-time or remote</p>
+
+  <div class="ct-grid">
+    <div class="ct-info">
+      <h3>Let's build something meaningful</h3>
+      <p>I'm actively seeking opportunities to apply my AI and development skills in a real-world environment. Whether you have a role, a project, or just want to talk tech — I'd love to hear from you.</p>
+      <div class="ct-links">
+        <a href="mailto:gampasanihymavathi@gmail.com" class="ct-item">
+          <span class="ct-icon">✉️</span><span>gampasanihymavathi@gmail.com</span>
         </a>
-        <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" title="LinkedIn" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" class="ct-item">
+          <span class="ct-icon">💼</span><span>linkedin.com/in/hymavathi-g</span>
         </a>
-        <a href="https://github.com/HymavathiSri" target="_blank" title="GitHub" class="social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        <a href="https://github.com/HymavathiSri" target="_blank" class="ct-item">
+          <span class="ct-icon">🐙</span><span>github.com/HymavathiSri</span>
         </a>
-      </div>
-    </div>
-    <div class="hero-image-wrap">
-      <div class="hero-image-ring"></div>
-      <img src="assets/profile.png" alt="Hymavathi Gampasani" class="hero-image" />
-      <div class="hero-chips">
-        <div class="chip chip-1">Deep Learning</div>
-        <div class="chip chip-2">Python</div>
-        <div class="chip chip-3">AWS Cloud</div>
-        <div class="chip chip-4">YOLOv7</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section" id="skills">
-    <div class="section-eyebrow">What I Know</div>
-    <h2 class="section-title">Technical Skills</h2>
-    <p class="section-sub">Across AI, development, cloud, and data — built through projects and hands-on learning</p>
-
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-card-icon">🤖</div>
-        <h3>AI & Machine Learning</h3>
-        <div class="tags">
-          <span>Deep Learning</span><span>Computer Vision</span><span>YOLOv4/v5/v7</span>
-          <span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>CNN</span><span>NLP</span>
+        <div class="ct-item">
+          <span class="ct-icon">📍</span><span>Hyderabad, India · Open to Remote</span>
         </div>
       </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">💻</div>
-        <h3>Programming</h3>
-        <div class="tags">
-          <span>Python</span><span>Java</span><span>C</span><span>JavaScript</span>
-          <span>SQL</span><span>Bash</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">🌐</div>
-        <h3>Web Development</h3>
-        <div class="tags">
-          <span>Django</span><span>HTML/CSS</span><span>Bootstrap</span>
-          <span>PHP</span><span>MySQL</span><span>SQLite3</span><span>REST APIs</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">☁️</div>
-        <h3>Cloud & DevOps</h3>
-        <div class="tags">
-          <span>AWS EC2</span><span>AWS S3</span><span>AWS RDS</span>
-          <span>Cloud Deployment</span><span>Scalable Apps</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">🗄️</div>
-        <h3>Data & Databases</h3>
-        <div class="tags">
-          <span>SQL</span><span>MySQL</span><span>SQLite</span><span>Excel</span>
-          <span>Data Analysis</span><span>MS Office</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card-icon">🧪</div>
-        <h3>Engineering Practices</h3>
-        <div class="tags">
-          <span>SDLC</span><span>Software Testing</span><span>Agile</span>
-          <span>Git & GitHub</span><span>Problem Solving</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECTS -->
-  <section class="section section-dark" id="projects">
-    <div class="section-eyebrow">What I've Built</div>
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-sub">Real-world systems from computer vision to full-stack applications</p>
-
-    <div class="projects-grid">
-      <div class="project-card featured">
-        <div class="project-tag">Computer Vision · Deep Learning</div>
-        <h3>Automated Road Damage Detection</h3>
-        <p>UAV-based road damage detection system using YOLOv4, YOLOv5, and YOLOv7 on deep CNNs. Trained on the RDD2022 dataset (China + Spain), achieving accurate object detection and localization from aerial images — enabling smarter infrastructure monitoring at scale.</p>
-        <div class="project-pills">
-          <span>Python</span><span>YOLOv7</span><span>TensorFlow</span><span>OpenCV</span><span>UAV</span><span>CNN</span>
-        </div>
-        <div class="project-meta">
-          <span>🛩️ UAV imagery</span>
-          <span>📊 Multi-algorithm comparison</span>
-        </div>
-        <a href="projects.html#road-damage" class="project-link">View Details →</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-tag">Full Stack · Python</div>
-        <h3>Loan Insurance System</h3>
-        <p>End-to-end loan management web application built with Django, SQLite3, JavaScript, HTML, CSS, and Bootstrap — featuring loan tracking, user authentication, and a clean data-driven dashboard.</p>
-        <div class="project-pills">
-          <span>Django</span><span>SQLite3</span><span>JavaScript</span><span>Bootstrap</span>
-        </div>
-        <a href="projects.html#loan" class="project-link">View Details →</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-tag">Web Application</div>
-        <h3>Library Management System</h3>
-        <p>Full-featured library management portal with HTML, CSS, JavaScript, PHP, and MySQL on a XAMPP server — supporting book inventory, member records, and issue/return workflows.</p>
-        <div class="project-pills">
-          <span>PHP</span><span>MySQL</span><span>HTML/CSS</span><span>Bootstrap</span><span>XAMPP</span>
-        </div>
-        <a href="projects.html#library" class="project-link">View Details →</a>
-      </div>
+      <a href="assets/Hymavathi_Resume_.pdf" class="btn-p" download>Download Resume ↓</a>
     </div>
 
-    <div class="center-cta">
-      <a href="projects.html" class="btn-primary">View All Projects →</a>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="section-eyebrow">My Journey</div>
-    <h2 class="section-title">Experience & Education</h2>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">Nov 2025 – Apr 2026</div>
-          <h3>Software Development Intern</h3>
-          <p class="timeline-org">Cognifyz Technologies</p>
-          <ul>
-            <li>Worked on real-time software development projects applying Python programming skills in production environments.</li>
-            <li>Built and tested features across multiple modules, gaining experience with debugging, code reviews, and agile workflows.</li>
-            <li>Collaborated with cross-functional teams to deliver software solutions that met business requirements and deadlines.</li>
-            <li>Enhanced proficiency in writing clean, maintainable Python code following software engineering best practices.</li>
-          </ul>
-          <div class="timeline-tags"><span>Python</span><span>Software Development</span><span>Agile</span></div>
-        </div>
+    <form class="form" onsubmit="sendMsg(event)">
+      <div class="fg">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Smith" required>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">May 2025 – Oct 2025</div>
-          <h3>AWS Cloud Computing Intern</h3>
-          <p class="timeline-org">Amazon Web Services (AWS)</p>
-          <ul>
-            <li>Gained hands-on experience with core AWS cloud services including EC2, S3, and RDS for real-world application deployment.</li>
-            <li>Developed and deployed scalable applications on the AWS platform, applying cloud principles to solve practical infrastructure challenges.</li>
-            <li>Worked on real-time cloud projects, optimizing resource usage and leveraging managed services for reliability and cost-efficiency.</li>
-            <li>Collaborated with a team to design cloud architectures, improving both technical proficiency and cross-team communication skills.</li>
-          </ul>
-          <div class="timeline-tags"><span>AWS EC2</span><span>S3</span><span>RDS</span><span>Cloud Architecture</span></div>
-        </div>
+      <div class="fg">
+        <label>Your Email</label>
+        <input type="email" placeholder="jane@company.com" required>
       </div>
-
-      <div class="timeline-item edu">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-date">2021 – 2025</div>
-          <h3>B.Tech — Artificial Intelligence & Data Science</h3>
-          <p class="timeline-org">St. Mary's Women's Engineering College, Guntur</p>
-          <p>CGPA: <strong>74%</strong> · Focused on machine learning, deep learning, data structures, web development, and cloud computing. Completed a major final-year project on UAV-based road damage detection using deep CNN architectures.</p>
-          <div class="timeline-tags"><span>AI/ML</span><span>Data Science</span><span>Deep Learning</span></div>
-        </div>
+      <div class="fg">
+        <label>Subject</label>
+        <input type="text" placeholder="Job Opportunity / Collaboration">
       </div>
-    </div>
-
-    <!-- Achievements -->
-    <div class="achievements-wrap">
-      <h3 class="achievements-title">Achievements & Certifications</h3>
-      <div class="achievements-grid">
-        <div class="achievement-card">
-          <div class="ach-icon">🥈</div>
-          <p>Silver Medal — Java Internship project completion</p>
-        </div>
-        <div class="achievement-card">
-          <div class="ach-icon">🏆</div>
-          <p>Elite+ Badge — Java Certification (78% score)</p>
-        </div>
-        <div class="achievement-card">
-          <div class="ach-icon">🔬</div>
-          <p>District-level 2nd place — Science Exhibition</p>
-        </div>
-        <div class="achievement-card">
-          <div class="ach-icon">📜</div>
-          <p>Certified in Java, Data Science, C & Data Structures, Hackathon</p>
-        </div>
-        <div class="achievement-card">
-          <div class="ach-icon">☁️</div>
-          <p>AWS Cloud Computing Internship Certificate</p>
-        </div>
-        <div class="achievement-card">
-          <div class="ach-icon">💡</div>
-          <p>Hackathon Participant — problem-solving under real constraints</p>
-        </div>
+      <div class="fg">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Tell me about the role or project..." required></textarea>
       </div>
-    </div>
-  </section>
+      <button type="submit" class="btn-p btn-full">Send Message →</button>
+      <p class="fnote" id="fnote"></p>
+    </form>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="section section-contact" id="contact">
-    <div class="section-eyebrow">Let's Connect</div>
-    <h2 class="section-title">Get In Touch</h2>
-    <p class="section-sub">Open to AI, ML, Data Science, and Software Engineering roles — full-time or remote</p>
+<!-- FOOTER -->
+<footer>
+  <span class="fl">HG.</span>
+  <span class="fc">© 2026 Hymavathi Gampasani · AI &amp; Data Science Engineer · Hyderabad, India</span>
+  <div class="flinks">
+    <a href="mailto:gampasanihymavathi@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/HymavathiSri" target="_blank">GitHub</a>
+  </div>
+</footer>
 
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Let's build something meaningful</h3>
-        <p>I'm actively seeking opportunities to apply my AI and development skills in a real-world environment. Whether you have a role, a project, or just want to talk tech — I'd love to hear from you.</p>
-        <div class="contact-links">
-          <a href="mailto:gampasanihymavathi@gmail.com" class="contact-item">
-            <span class="contact-icon">✉️</span>
-            <span>gampasanihymavathi@gmail.com</span>
-          </a>
-          <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" class="contact-item">
-            <span class="contact-icon">💼</span>
-            <span>linkedin.com/in/hymavathi-g</span>
-          </a>
-          <a href="https://github.com/HymavathiSri" target="_blank" class="contact-item">
-            <span class="contact-icon">🐙</span>
-            <span>github.com/HymavathiSri</span>
-          </a>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span>Hyderabad, India · Open to Remote</span>
-          </div>
-        </div>
-        <a href="assets/Hymavathi_Resume.pdf" class="btn-primary" download>Download Resume ↓</a>
-      </div>
+<script>
+// hamburger
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>mob.classList.toggle('on'));
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('on')));
 
-      <form class="contact-form" onsubmit="handleContact(event)">
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="Jane Smith" required />
-        </div>
-        <div class="form-group">
-          <label>Your Email</label>
-          <input type="email" placeholder="jane@company.com" required />
-        </div>
-        <div class="form-group">
-          <label>Subject</label>
-          <input type="text" placeholder="Job Opportunity / Collaboration" />
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea rows="5" placeholder="Tell me about the role or project..." required></textarea>
-        </div>
-        <button type="submit" class="btn-primary btn-full">Send Message →</button>
-        <p class="form-note" id="formNote"></p>
-      </form>
-    </div>
-  </section>
+// nav scroll
+const nav=document.querySelector('nav');
+window.addEventListener('scroll',()=>nav.style.boxShadow=window.scrollY>40?'0 4px 30px rgba(0,0,0,.4)':'none',{passive:true});
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>HG.</p>
-    <p class="footer-copy">© 2026 Hymavathi Gampasani · AI & Data Science Engineer · Hyderabad, India</p>
-    <div class="footer-links">
-      <a href="mailto:gampasanihymavathi@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/HymavathiSri" target="_blank">GitHub</a>
-    </div>
-  </footer>
+// smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-70,behavior:'smooth'});}
+  });
+});
 
-  <script src="script.js"></script>
+// fade in on scroll
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});
+},{threshold:.07,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.au').forEach((el,i)=>{
+  el.style.transitionDelay=(i%4)*70+'ms';
+  obs.observe(el);
+});
+
+// contact form
+function sendMsg(e){
+  e.preventDefault();
+  const n=document.getElementById('fnote');
+  n.textContent='✓ Thanks! I\'ll get back to you soon.';
+  e.target.reset();
+  setTimeout(()=>n.textContent='',4000);
+}
+</script>
 </body>
 </html>
