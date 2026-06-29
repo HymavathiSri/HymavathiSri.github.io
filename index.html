@@ -4,340 +4,447 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Hymavathi Gampasani — AI & Data Science Engineer</title>
-<meta name="description" content="Hymavathi Gampasani — B.Tech AI & Data Science graduate with expertise in Deep Learning, Computer Vision, AWS Cloud, and Full-Stack Development. Open to AI, ML, Data, and Software roles."/>
-<meta name="keywords" content="AI Engineer, Data Science, Machine Learning, Deep Learning, Python, AWS, Computer Vision, YOLOv7, Django, Software Developer, Hyderabad, Remote"/>
-<meta property="og:title" content="Hymavathi Gampasani — AI & Data Science Engineer"/>
-<meta property="og:description" content="Building intelligent systems with deep learning, cloud, and full-stack skills. Open to AI, ML, Data, and Software roles."/>
-<meta property="og:type" content="website"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<meta name="description" content="Hymavathi Gampasani — B.Tech AI & Data Science graduate with expertise in Deep Learning, Computer Vision, AWS Cloud, and Full-Stack Development."/>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NETWORK CANVAS BACKGROUND -->
+<canvas id="network-canvas"></canvas>
+
+<!-- TOP NAV -->
 <nav id="nav">
-  <a href="#hero" class="nav-logo">HG.</a>
+  <a href="#home" class="nav-brand active">HOME</a>
   <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#chat">Chat AI</a>
-    <a href="#contact">Contact</a>
+    <a href="#intro">INTRO</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#experience">EXPERIENCE</a>
+    <a href="#chat">CHAT AI</a>
+    <a href="#contact">CONTACT</a>
   </div>
-  <a href="assets/Hymavathi_Resume.pdf" class="nav-resume" download>Resume ↓</a>
-  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="mob-menu" id="mobMenu">
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-  <a href="#chat">Chat AI</a>
-  <a href="#contact">Contact</a>
-  <a href="assets/Hymavathi_Resume.pdf" download>Download Resume</a>
+  <a href="#home">HOME</a>
+  <a href="#intro">INTRO</a>
+  <a href="#skills">SKILLS</a>
+  <a href="#projects">PROJECTS</a>
+  <a href="#experience">EXPERIENCE</a>
+  <a href="#chat">CHAT AI</a>
+  <a href="#contact">CONTACT</a>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-left" id="about">
-    <div class="available-badge"><span class="pulse"></span>Open to opportunities</div>
-    <h1 class="hero-name">Hymavathi<br/><span>Gampasani</span></h1>
-    <p class="hero-role">AI & Data Science Engineer</p>
-    <p class="hero-bio">
-      B.Tech graduate in <strong>Artificial Intelligence & Data Science</strong> with hands-on experience in deep learning, computer vision, AWS cloud, and full-stack development. I build intelligent systems that solve real-world problems. Open to <strong>AI, ML, Data, and Software</strong> roles — full-time or remote.
-    </p>
-    <div class="stats">
-      <div><span class="stat-num">4+</span><span class="stat-lbl">Projects Built</span></div>
-      <div><span class="stat-num">2</span><span class="stat-lbl">Internships</span></div>
-      <div><span class="stat-num">74%</span><span class="stat-lbl">B.Tech Score</span></div>
+<!-- HERO / HOME -->
+<section id="home" class="hero-section">
+  <div class="hero-content">
+    <!-- Profile circle with name split -->
+    <div class="hero-name-row">
+      <span class="hero-firstname">HYMAVATHI</span>
+      <div class="hero-circle-wrap">
+        <div class="hero-circle">
+          <img src="assets/profile.png" alt="Hymavathi Gampasani" class="hero-avatar"/>
+        </div>
+      </div>
+      <span class="hero-lastname">GAMPASANI</span>
     </div>
-    <div class="hero-btns">
-      <a href="#projects" class="btn-p">View Projects</a>
-      <a href="#contact" class="btn-s">Contact Me</a>
-    </div>
-    <div class="social-row">
-      <a href="mailto:gampasanihymavathi@gmail.com" class="soc" title="Email">
+
+    <div class="hero-divider"></div>
+
+    <!-- Social icons -->
+    <div class="hero-social">
+      <a href="mailto:gampasanihymavathi@gmail.com" class="soc-ico" title="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" class="soc" title="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://github.com/HymavathiSri" target="_blank" class="soc" title="GitHub">
+      <a href="https://github.com/HymavathiSri" target="_blank" class="soc-ico" title="GitHub">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
       </a>
+      <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" class="soc-ico" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+    </div>
+
+    <p class="hero-desc">
+      Welcome to Hymavathi's <u>portfolio</u>.<br/>
+      I'm an <strong>AI & Data Science Engineer</strong> with expertise in deep learning, computer vision, and AWS cloud.<br/>
+      Currently open to <strong>AI, ML, Data, and Software</strong> roles — full-time or remote.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#intro" class="btn-outline">EXPLORE</a>
+      <a href="assets/Hymavathi_Resume.pdf" class="btn-outline" download>RESUME ↓</a>
+    </div>
+
+    <div class="hero-scroll-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
   </div>
+</section>
 
-  <div class="hero-right">
-    <div class="img-wrap">
-      <div class="img-orbit"></div>
-      <img src="assets/profile.png" alt="Hymavathi Gampasani" class="hero-photo"/>
-      <span class="float-tag ft1">Deep Learning</span>
-      <span class="float-tag ft2">Python</span>
-      <span class="float-tag ft3">AWS Cloud</span>
-      <span class="float-tag ft4">YOLOv7</span>
+<!-- INTRO / ABOUT -->
+<section id="intro" class="page-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WHO I AM</div>
+      <h2>Intro</h2>
+    </div>
+    <div class="intro-layout">
+      <div class="intro-photo-col">
+        <div class="profile-photo-wrap">
+          <img src="assets/profile.png" alt="Hymavathi Gampasani" class="profile-photo"/>
+          <div class="photo-border"></div>
+        </div>
+        <div class="intro-quick-info">
+          <div class="qi-item"><span class="qi-label">Location</span><span class="qi-val">Hyderabad, India</span></div>
+          <div class="qi-item"><span class="qi-label">Available</span><span class="qi-val available-dot">Open to Work</span></div>
+          <div class="qi-item"><span class="qi-label">Remote</span><span class="qi-val">Yes, globally</span></div>
+        </div>
+        <a href="assets/Hymavathi_Resume.pdf" class="btn-teal" download>Download Resume</a>
+      </div>
+      <div class="intro-text-col">
+        <h3>B.Tech AI & Data Science Graduate</h3>
+        <p>I'm a passionate engineer who builds intelligent systems that solve real-world problems. My journey started with a curiosity about how machines can see and understand the world — leading me into computer vision, deep learning, and UAV-based infrastructure analysis.</p>
+        <p>During my studies and internships at <strong>Cognifyz Technologies</strong> and <strong>AWS</strong>, I gained hands-on experience shipping production code, designing cloud architectures, and applying ML models to practical challenges.</p>
+        <p>I believe great AI is built at the intersection of strong fundamentals, creativity, and real-world empathy. Whether it's detecting road damage from aerial images or building full-stack Django applications, I bring attention to detail and a drive to ship things that actually work.</p>
+        <div class="stats-row">
+          <div class="stat-box"><span class="stat-n">4+</span><span class="stat-l">Projects</span></div>
+          <div class="stat-box"><span class="stat-n">2</span><span class="stat-l">Internships</span></div>
+          <div class="stat-box"><span class="stat-n">74%</span><span class="stat-l">B.Tech CGPA</span></div>
+          <div class="stat-box"><span class="stat-n">5+</span><span class="stat-l">Certifications</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section class="sec" id="skills">
-  <div class="eyebrow">What I Know</div>
-  <h2 class="sec-title">Technical Skills</h2>
-  <p class="sec-sub">Built through hands-on projects, internships, and continuous learning</p>
-  <div class="skills-grid">
-    <div class="skill-card fade">
-      <div class="skill-icon">🤖</div>
-      <h3>AI & Machine Learning</h3>
-      <div class="skill-level-row"><span class="skill-lvl expert">Expert</span></div>
-      <div class="tags">
-        <span class="tag">Deep Learning</span><span class="tag">Computer Vision</span><span class="tag">YOLOv4/5/7</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">CNN</span>
-      </div>
-      <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+<section id="skills" class="page-section alt-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WHAT I KNOW</div>
+      <h2>Skills</h2>
     </div>
-    <div class="skill-card fade">
-      <div class="skill-icon">💻</div>
-      <h3>Programming</h3>
-      <div class="skill-level-row"><span class="skill-lvl expert">Expert</span></div>
-      <div class="tags">
-        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span><span class="tag">JavaScript</span><span class="tag">SQL</span>
+    <p class="section-desc">Built through hands-on projects, internships, and continuous learning</p>
+    <div class="skills-grid">
+      <div class="skill-card fade">
+        <div class="skill-icon-wrap">🤖</div>
+        <h3>AI & Machine Learning</h3>
+        <div class="skill-level expert">Expert</div>
+        <div class="tags">
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">YOLOv4/5/7</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Keras</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">CNN</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:82%"></div></div>
       </div>
-      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
-    </div>
-    <div class="skill-card fade">
-      <div class="skill-icon">🌐</div>
-      <h3>Web Development</h3>
-      <div class="skill-level-row"><span class="skill-lvl proficient">Proficient</span></div>
-      <div class="tags">
-        <span class="tag">Django</span><span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">SQLite3</span>
+      <div class="skill-card fade">
+        <div class="skill-icon-wrap">💻</div>
+        <h3>Programming</h3>
+        <div class="skill-level expert">Expert</div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">C</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:88%"></div></div>
       </div>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-    </div>
-    <div class="skill-card fade">
-      <div class="skill-icon">☁️</div>
-      <h3>Cloud — AWS</h3>
-      <div class="skill-level-row"><span class="skill-lvl proficient">Proficient</span></div>
-      <div class="tags">
-        <span class="tag">EC2</span><span class="tag">S3</span><span class="tag">RDS</span><span class="tag">Cloud Architecture</span><span class="tag">Scalable Apps</span>
+      <div class="skill-card fade">
+        <div class="skill-icon-wrap">🌐</div>
+        <h3>Web Development</h3>
+        <div class="skill-level proficient">Proficient</div>
+        <div class="tags">
+          <span class="tag">Django</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:75%"></div></div>
       </div>
-      <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
-    </div>
-    <div class="skill-card fade">
-      <div class="skill-icon">🗄️</div>
-      <h3>Data & Databases</h3>
-      <div class="skill-level-row"><span class="skill-lvl proficient">Proficient</span></div>
-      <div class="tags">
-        <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">Excel</span><span class="tag">Data Analysis</span>
+      <div class="skill-card fade">
+        <div class="skill-icon-wrap">☁️</div>
+        <h3>Cloud — AWS</h3>
+        <div class="skill-level proficient">Proficient</div>
+        <div class="tags">
+          <span class="tag">EC2</span>
+          <span class="tag">S3</span>
+          <span class="tag">RDS</span>
+          <span class="tag">Cloud Architecture</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:70%"></div></div>
       </div>
-      <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
-    </div>
-    <div class="skill-card fade">
-      <div class="skill-icon">🧪</div>
-      <h3>Engineering & Tools</h3>
-      <div class="skill-level-row"><span class="skill-lvl proficient">Proficient</span></div>
-      <div class="tags">
-        <span class="tag">SDLC</span><span class="tag">Software Testing</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Agile</span>
+      <div class="skill-card fade">
+        <div class="skill-icon-wrap">🗄️</div>
+        <h3>Data & Databases</h3>
+        <div class="skill-level proficient">Proficient</div>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Excel</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:72%"></div></div>
       </div>
-      <div class="skill-bar"><div class="skill-fill" style="width:74%"></div></div>
+      <div class="skill-card fade">
+        <div class="skill-icon-wrap">🧪</div>
+        <h3>Engineering & Tools</h3>
+        <div class="skill-level proficient">Proficient</div>
+        <div class="tags">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Agile</span>
+          <span class="tag">SDLC</span>
+          <span class="tag">Testing</span>
+        </div>
+        <div class="skill-bar-wrap"><div class="skill-bar-fill" style="width:74%"></div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="sec sec-dark" id="projects">
-  <div class="eyebrow">What I've Built</div>
-  <h2 class="sec-title">Featured Projects</h2>
-  <p class="sec-sub">From computer vision research to production web apps and cloud deployments</p>
+<section id="projects" class="page-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">WHAT I'VE BUILT</div>
+      <h2>Projects</h2>
+    </div>
+    <p class="section-desc">From computer vision research to production web apps and cloud deployments</p>
 
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="cv">Computer Vision</button>
-    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-    <button class="filter-btn" data-filter="cloud">Cloud</button>
-    <button class="filter-btn" data-filter="ml">Machine Learning</button>
-  </div>
-
-  <div class="proj-grid">
-    <div class="proj-card big fade" data-cat="cv ml">
-      <div class="proj-tag">Computer Vision · Deep Learning</div>
-      <h3>Automated Road Damage Detection Using UAV Images</h3>
-      <p>UAV-based road damage detection using YOLOv4, YOLOv5, and YOLOv7 on deep CNN backbones. Trained on the RDD2022 dataset (China + Spain) for cross-domain road damage detection — enabling smarter, faster infrastructure inspection at scale.</p>
-      <div class="proj-meta-badges">
-        <span class="proj-badge">🛩️ UAV aerial imagery</span>
-        <span class="proj-badge">📊 3-algorithm benchmark</span>
-        <span class="proj-badge">🌍 Cross-domain detection</span>
-      </div>
-      <div class="proj-pills">
-        <span class="pill">Python</span><span class="pill">YOLOv7</span><span class="pill">TensorFlow</span><span class="pill">Keras</span><span class="pill">OpenCV</span><span class="pill">CNN</span><span class="pill">UAV</span>
-      </div>
-      <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="cv">Computer Vision</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="cloud">Cloud</button>
     </div>
 
-    <div class="proj-card fade" data-cat="fullstack">
-      <div class="proj-tag">Full Stack · Python</div>
-      <h3>Loan Insurance System</h3>
-      <p>Complete loan management web app built with Django, SQLite3, JavaScript, HTML/CSS, and Bootstrap — featuring user auth, loan tracking, and a clean admin dashboard.</p>
-      <div class="proj-pills">
-        <span class="pill">Django</span><span class="pill">SQLite3</span><span class="pill">JavaScript</span><span class="pill">Bootstrap</span>
+    <div class="proj-grid">
+      <div class="proj-card featured fade" data-cat="cv ml">
+        <div class="proj-badge-row">
+          <span class="proj-cat-badge">Computer Vision · Deep Learning</span>
+          <span class="proj-featured-badge">Featured</span>
+        </div>
+        <h3>Automated Road Damage Detection Using UAV Images</h3>
+        <p>UAV-based road damage detection using YOLOv4, YOLOv5, and YOLOv7 on deep CNN backbones. Trained on the RDD2022 dataset (China + Spain) for cross-domain road damage detection — enabling smarter, faster infrastructure inspection at scale.</p>
+        <div class="proj-highlights">
+          <span>🛩️ UAV aerial imagery</span>
+          <span>📊 3-algorithm benchmark</span>
+          <span>🌍 Cross-domain detection</span>
+        </div>
+        <div class="proj-pills">
+          <span class="pill">Python</span><span class="pill">YOLOv7</span><span class="pill">TensorFlow</span><span class="pill">Keras</span><span class="pill">OpenCV</span><span class="pill">CNN</span>
+        </div>
+        <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
       </div>
-      <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
+
+      <div class="proj-card fade" data-cat="fullstack">
+        <div class="proj-badge-row">
+          <span class="proj-cat-badge">Full Stack · Python</span>
+        </div>
+        <h3>Loan Insurance System</h3>
+        <p>Complete loan management web app built with Django, SQLite3, JavaScript, HTML/CSS, and Bootstrap — featuring user auth, loan tracking, and a clean admin dashboard.</p>
+        <div class="proj-pills">
+          <span class="pill">Django</span><span class="pill">SQLite3</span><span class="pill">JavaScript</span><span class="pill">Bootstrap</span>
+        </div>
+        <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
+
+      <div class="proj-card fade" data-cat="fullstack">
+        <div class="proj-badge-row">
+          <span class="proj-cat-badge">Web Application · PHP</span>
+        </div>
+        <h3>Library Management System</h3>
+        <p>Full-featured library portal with PHP, MySQL, HTML/CSS, and Bootstrap on XAMPP — supporting book inventory, member records, issue/return workflows, and fine calculation.</p>
+        <div class="proj-pills">
+          <span class="pill">PHP</span><span class="pill">MySQL</span><span class="pill">Bootstrap</span><span class="pill">XAMPP</span>
+        </div>
+        <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
+
+      <div class="proj-card fade" data-cat="cloud">
+        <div class="proj-badge-row">
+          <span class="proj-cat-badge">Cloud · AWS</span>
+        </div>
+        <h3>Scalable App Deployment on AWS</h3>
+        <p>Designed and deployed cloud-native applications on AWS EC2, S3, and RDS — applying scalability, fault tolerance, and cost-optimization principles during the AWS Cloud internship.</p>
+        <div class="proj-pills">
+          <span class="pill">AWS EC2</span><span class="pill">S3</span><span class="pill">RDS</span><span class="pill">Cloud Architecture</span>
+        </div>
+        <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
+      </div>
     </div>
 
-    <div class="proj-card fade" data-cat="fullstack">
-      <div class="proj-tag">Web Application · PHP</div>
-      <h3>Library Management System</h3>
-      <p>Full-featured library portal with PHP, MySQL, HTML/CSS, and Bootstrap on XAMPP — supporting book inventory, member records, issue/return workflows, and fine calculation.</p>
-      <div class="proj-pills">
-        <span class="pill">PHP</span><span class="pill">MySQL</span><span class="pill">Bootstrap</span><span class="pill">XAMPP</span>
-      </div>
-      <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
+    <div class="cta-center fade">
+      <a href="https://github.com/HymavathiSri" target="_blank" class="btn-teal">View All on GitHub →</a>
     </div>
-
-    <div class="proj-card fade" data-cat="cloud">
-      <div class="proj-tag">Cloud · AWS</div>
-      <h3>Scalable App Deployment on AWS</h3>
-      <p>Designed and deployed cloud-native applications on AWS EC2, S3, and RDS — applying scalability, fault tolerance, and cost-optimization principles during the AWS Cloud internship.</p>
-      <div class="proj-pills">
-        <span class="pill">AWS EC2</span><span class="pill">S3</span><span class="pill">RDS</span><span class="pill">Cloud Architecture</span>
-      </div>
-      <a href="https://github.com/HymavathiSri" target="_blank" class="proj-link">View on GitHub →</a>
-    </div>
-  </div>
-  <div class="proj-cta fade">
-    <a href="https://github.com/HymavathiSri" target="_blank" class="btn-s">View All Projects on GitHub →</a>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="sec" id="experience">
-  <div class="eyebrow">My Journey</div>
-  <h2 class="sec-title">Experience & Education</h2>
-  <div class="timeline">
-    <div class="tl-item fade">
-      <div class="tl-dot"></div>
-      <div class="tl-box">
-        <div class="tl-date">Nov 2025 – Apr 2026</div>
-        <h3>Software Development Intern</h3>
-        <p class="tl-org">Cognifyz Technologies</p>
-        <ul>
-          <li>Worked on real-time software development projects using Python in production environments.</li>
-          <li>Built and tested features across multiple modules following agile workflows and code review practices.</li>
-          <li>Collaborated with cross-functional teams to deliver reliable, maintainable software solutions.</li>
-          <li>Strengthened proficiency in writing clean Python code following industry best practices.</li>
-        </ul>
-        <div class="tl-chips"><span class="tl-chip">Python</span><span class="tl-chip">Agile</span><span class="tl-chip">Software Development</span><span class="tl-chip">Testing</span></div>
-      </div>
+<section id="experience" class="page-section alt-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">MY JOURNEY</div>
+      <h2>Experience</h2>
     </div>
-    <div class="tl-item fade">
-      <div class="tl-dot"></div>
-      <div class="tl-box">
-        <div class="tl-date">May 2025 – Oct 2025</div>
-        <h3>AWS Cloud Computing Intern</h3>
-        <p class="tl-org">Amazon Web Services (AWS)</p>
-        <ul>
-          <li>Gained hands-on experience with EC2, S3, and RDS for real-world application deployment.</li>
-          <li>Developed and deployed scalable applications on AWS, solving practical cloud infrastructure challenges.</li>
-          <li>Optimized resource usage and applied cost-efficiency principles for managed cloud services.</li>
-          <li>Collaborated with team on cloud architecture design, boosting both technical and communication skills.</li>
-        </ul>
-        <div class="tl-chips"><span class="tl-chip">AWS EC2</span><span class="tl-chip">S3</span><span class="tl-chip">RDS</span><span class="tl-chip">Cloud Architecture</span></div>
-      </div>
-    </div>
-    <div class="tl-item edu fade">
-      <div class="tl-dot"></div>
-      <div class="tl-box">
-        <div class="tl-date">2021 – 2025</div>
-        <h3>B.Tech — Artificial Intelligence & Data Science</h3>
-        <p class="tl-org">St. Mary's Women's Engineering College, Guntur</p>
-        <p>CGPA: <strong>74%</strong> · Focused on machine learning, deep learning, data structures, web development, and cloud computing. Final-year project: UAV-based road damage detection using deep CNN architectures (YOLOv4/5/7).</p>
-        <div class="tl-chips"><span class="tl-chip">AI/ML</span><span class="tl-chip">Data Science</span><span class="tl-chip">Deep Learning</span><span class="tl-chip">Computer Vision</span></div>
-      </div>
-    </div>
-  </div>
 
-  <h3 class="ach-heading">Achievements & Certifications</h3>
-  <div class="ach-grid">
-    <div class="ach-card fade"><div class="ach-ico">🥈</div><p>Silver Medal — Java Internship project completion</p></div>
-    <div class="ach-card fade"><div class="ach-ico">🏆</div><p>Elite+ Badge — Java Certification with 78% score</p></div>
-    <div class="ach-card fade"><div class="ach-ico">🔬</div><p>District-level 2nd place — Science Exhibition</p></div>
-    <div class="ach-card fade"><div class="ach-ico">📜</div><p>Certificates: Java, Data Science, C & Data Structures, Hackathon</p></div>
-    <div class="ach-card fade"><div class="ach-ico">☁️</div><p>AWS Cloud Computing Internship Certificate</p></div>
-    <div class="ach-card fade"><div class="ach-ico">💡</div><p>Hackathon Participant — problem-solving under real constraints</p></div>
+    <div class="timeline">
+      <div class="tl-item fade">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">Nov 2025 – Apr 2026</div>
+          <h3>Software Development Intern</h3>
+          <div class="tl-org">Cognifyz Technologies</div>
+          <ul>
+            <li>Worked on real-time software development projects using Python in production environments.</li>
+            <li>Built and tested features across multiple modules following agile workflows and code review practices.</li>
+            <li>Collaborated with cross-functional teams to deliver reliable, maintainable software solutions.</li>
+          </ul>
+          <div class="tl-chips">
+            <span>Python</span><span>Agile</span><span>Software Development</span><span>Testing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item fade">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">May 2025 – Oct 2025</div>
+          <h3>AWS Cloud Computing Intern</h3>
+          <div class="tl-org">Amazon Web Services (AWS)</div>
+          <ul>
+            <li>Gained hands-on experience with EC2, S3, and RDS for real-world application deployment.</li>
+            <li>Deployed scalable applications on AWS, solving practical cloud infrastructure challenges.</li>
+            <li>Optimized resource usage and applied cost-efficiency principles for managed cloud services.</li>
+          </ul>
+          <div class="tl-chips">
+            <span>AWS EC2</span><span>S3</span><span>RDS</span><span>Cloud Architecture</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item tl-edu fade">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">2021 – 2025</div>
+          <h3>B.Tech — Artificial Intelligence & Data Science</h3>
+          <div class="tl-org">St. Mary's Women's Engineering College, Guntur</div>
+          <p>CGPA: <strong>74%</strong> · Focused on machine learning, deep learning, data structures, web development, and cloud computing. Final-year project: UAV-based road damage detection using deep CNN architectures (YOLOv4/5/7).</p>
+          <div class="tl-chips">
+            <span>AI/ML</span><span>Data Science</span><span>Deep Learning</span><span>Computer Vision</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ach-section">
+      <h3 class="ach-title">Achievements & Certifications</h3>
+      <div class="ach-grid">
+        <div class="ach-card fade"><span class="ach-ico">🥈</span><p>Silver Medal — Java Internship project completion</p></div>
+        <div class="ach-card fade"><span class="ach-ico">🏆</span><p>Elite+ Badge — Java Certification with 78% score</p></div>
+        <div class="ach-card fade"><span class="ach-ico">🔬</span><p>District-level 2nd place — Science Exhibition</p></div>
+        <div class="ach-card fade"><span class="ach-ico">📜</span><p>Certificates: Java, Data Science, C & Data Structures, Hackathon</p></div>
+        <div class="ach-card fade"><span class="ach-ico">☁️</span><p>AWS Cloud Computing Internship Certificate</p></div>
+        <div class="ach-card fade"><span class="ach-ico">💡</span><p>Hackathon Participant — problem-solving under real constraints</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CHAT AI -->
-<section class="sec sec-dark" id="chat">
-  <div class="eyebrow">Ask Anything</div>
-  <h2 class="sec-title">Chat with My Portfolio AI</h2>
-  <p class="sec-sub">Ask about my experience, projects, skills, or what I can bring to your team</p>
-  <div class="chat-wrap">
-    <div class="chat-box" id="chatBox">
-      <div class="chat-msg bot">
-        <div class="chat-avatar">HG</div>
-        <div class="chat-bubble">Hi! I'm an AI trained on Hymavathi's portfolio. Ask me anything — her projects, skills, experience, or how she can contribute to your team. 🚀</div>
+<section id="chat" class="page-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">ASK ANYTHING</div>
+      <h2>Chat AI</h2>
+    </div>
+    <p class="section-desc">Ask about my experience, projects, skills, or what I can bring to your team</p>
+
+    <div class="chat-container">
+      <div class="chat-box" id="chatBox">
+        <div class="chat-msg bot">
+          <div class="chat-avatar">HG</div>
+          <div class="chat-bubble">Hi! I'm an AI trained on Hymavathi's portfolio. Ask me anything — her projects, skills, experience, or how she can contribute to your team. 🚀</div>
+        </div>
       </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="sug-btn" onclick="askSuggestion('What projects has she built with deep learning?')">What projects has she built with deep learning?</button>
+        <button class="sug-btn" onclick="askSuggestion('Tell me about her AWS cloud experience')">Tell me about her AWS experience</button>
+        <button class="sug-btn" onclick="askSuggestion('What makes her stand out as an AI candidate?')">What makes her stand out?</button>
+        <button class="sug-btn" onclick="askSuggestion('Is she open to remote roles?')">Is she open to remote roles?</button>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" class="chat-input" placeholder="Ask about Hymavathi's skills, projects, or experience..." onkeypress="handleKey(event)"/>
+        <button class="chat-send" id="chatSend" onclick="sendChat()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+      <p class="chat-note">Powered by Claude AI · Answers based on Hymavathi's actual experience</p>
     </div>
-    <div class="chat-suggestions" id="chatSuggestions">
-      <button class="sug-btn" onclick="askSuggestion('What projects has she built with deep learning?')">What projects has she built with deep learning?</button>
-      <button class="sug-btn" onclick="askSuggestion('Tell me about her AWS cloud experience')">Tell me about her AWS cloud experience</button>
-      <button class="sug-btn" onclick="askSuggestion('What makes her stand out as an AI/Data candidate?')">What makes her stand out?</button>
-      <button class="sug-btn" onclick="askSuggestion('Is she open to remote roles?')">Is she open to remote roles?</button>
-    </div>
-    <div class="chat-input-row">
-      <input type="text" class="chat-input" id="chatInput" placeholder="Ask about Hymavathi's skills, projects, or experience..." onkeypress="handleKey(event)"/>
-      <button class="chat-send" id="chatSend" onclick="sendChat()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
-    </div>
-    <p class="chat-note">Powered by Claude AI · Answers based on Hymavathi's actual experience</p>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="sec" id="contact">
-  <div class="eyebrow">Let's Connect</div>
-  <h2 class="sec-title">Get In Touch</h2>
-  <p class="sec-sub">Open to AI, ML, Data Science, and Software Engineering roles — full-time or remote</p>
-  <div class="contact-wrap">
-    <div class="contact-info fade">
-      <h3>Let's build something meaningful</h3>
-      <p>I'm actively seeking opportunities to apply my AI and development skills in the real world. Whether you have a role, a project, or just want to talk tech — I'd love to hear from you.</p>
-      <a href="mailto:gampasanihymavathi@gmail.com" class="clink">
-        <span class="clink-ico">✉️</span>gampasanihymavathi@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" class="clink">
-        <span class="clink-ico">💼</span>linkedin.com/in/hymavathi-g
-      </a>
-      <a href="https://github.com/HymavathiSri" target="_blank" class="clink">
-        <span class="clink-ico">🐙</span>github.com/HymavathiSri
-      </a>
-      <div class="clink">
-        <span class="clink-ico">📍</span>Hyderabad, India · Open to Remote
-      </div>
-      <br/>
-      <a href="assets/Hymavathi_Resume.pdf" class="btn-p" download>Download Resume ↓</a>
+<section id="contact" class="page-section alt-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">LET'S CONNECT</div>
+      <h2>Contact</h2>
     </div>
-    <form class="cform" onsubmit="sendMsg(event)">
-      <div class="fg"><label>Your Name</label><input type="text" placeholder="Jane Smith" required/></div>
-      <div class="fg"><label>Your Email</label><input type="email" placeholder="jane@company.com" required/></div>
-      <div class="fg"><label>Subject</label><input type="text" placeholder="Job Opportunity / Collaboration"/></div>
-      <div class="fg"><label>Message</label><textarea rows="4" placeholder="Tell me about the role or project..." required></textarea></div>
-      <button type="submit" class="btn-p" style="width:100%;border:none;cursor:pointer">Send Message →</button>
-      <p class="form-note" id="fnote"></p>
-    </form>
+    <p class="section-desc">Open to AI, ML, Data Science, and Software Engineering roles — full-time or remote</p>
+
+    <div class="contact-layout">
+      <div class="contact-info fade">
+        <h3>Let's build something meaningful</h3>
+        <p>I'm actively seeking opportunities to apply my AI and development skills in the real world. Whether you have a role, a project, or just want to talk tech — I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a href="mailto:gampasanihymavathi@gmail.com" class="c-link">
+            <span class="c-ico">✉️</span>gampasanihymavathi@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank" class="c-link">
+            <span class="c-ico">💼</span>linkedin.com/in/hymavathi-g
+          </a>
+          <a href="https://github.com/HymavathiSri" target="_blank" class="c-link">
+            <span class="c-ico">🐙</span>github.com/HymavathiSri
+          </a>
+          <div class="c-link">
+            <span class="c-ico">📍</span>Hyderabad, India · Open to Remote
+          </div>
+        </div>
+        <a href="assets/Hymavathi_Resume.pdf" class="btn-teal" download>Download Resume ↓</a>
+      </div>
+      <form class="contact-form fade" onsubmit="sendMsg(event)">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Jane Smith" required/></div>
+        <div class="form-group"><label>Your Email</label><input type="email" placeholder="jane@company.com" required/></div>
+        <div class="form-group"><label>Subject</label><input type="text" placeholder="Job Opportunity / Collaboration"/></div>
+        <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Tell me about the role or project..." required></textarea></div>
+        <button type="submit" class="btn-teal btn-full">Send Message →</button>
+        <p class="form-note" id="fnote"></p>
+      </form>
+    </div>
   </div>
 </section>
 
 <footer>
-  <span class="f-logo">HG.</span>
-  <p class="f-copy">© 2026 Hymavathi Gampasani · AI & Data Science Engineer · Hyderabad, India</p>
-  <div class="f-links">
-    <a href="mailto:gampasanihymavathi@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/HymavathiSri" target="_blank">GitHub</a>
+  <div class="footer-inner">
+    <span class="footer-logo">HG.</span>
+    <p>© 2026 Hymavathi Gampasani · AI & Data Science Engineer · Hyderabad, India</p>
+    <div class="footer-links">
+      <a href="mailto:gampasanihymavathi@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/hymavathi-g/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/HymavathiSri" target="_blank">GitHub</a>
+    </div>
   </div>
 </footer>
 
